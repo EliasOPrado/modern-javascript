@@ -213,40 +213,101 @@
 // console.log(val);
 
 // TEMPLATE LITERALS ================================
-const name = 'Elias';
-const age = 30;
-const job = 'web developer';
-const city = 'Dublin';
-let html;
+// const name = 'Elias';
+// const age = 30;
+// const job = 'web developer';
+// const city = 'Dublin';
+// let html;
 
-// without template strings (es5)
-html = '<ul><li>Name: ' + name + '</li><li>Age: ' + age + '</li><li>Job: ' + job + '</li><li>City: ' + city + '</li></ul>';
+// // without template strings (es5)
+// html = '<ul><li>Name: ' + name + '</li><li>Age: ' + age + '</li><li>Job: ' + job + '</li><li>City: ' + city + '</li></ul>';
 
-html = '<ul>' +
-     '<li>Name: ' + name + '</li>' +
-     '<li>Age: ' + age + '</li>' +
-     '<li>Job: ' + job + '</li>' +
-     '<li>City: ' + city + '</li>' +
-     '</ul>';
+// html = '<ul>' +
+//      '<li>Name: ' + name + '</li>' +
+//      '<li>Age: ' + age + '</li>' +
+//      '<li>Job: ' + job + '</li>' +
+//      '<li>City: ' + city + '</li>' +
+//      '</ul>';
 
-function hello(){
-    return 'hello ' + name; 
-}
-// with template strings (es6)
-html = `
-   <ul>
-     <li>Name: ${name} </li>
-     <li>Age: ${age} </li>
-     <li>Job: ${job} </li>
-     <li>City: ${2 + 2} </li>
-     <li>City: ${hello()} </li>
-     <li>City: ${age > 30 ? 'Over 30' : '30'} </li>
-   <ul>
-`;
+// function hello(){
+//     return 'hello ' + name; 
+// }
+// // with template strings (es6)
+// html = `
+//    <ul>
+//      <li>Name: ${name} </li>
+//      <li>Age: ${age} </li>
+//      <li>Job: ${job} </li>
+//      <li>City: ${2 + 2} </li>
+//      <li>City: ${hello()} </li>
+//      <li>City: ${age > 30 ? 'Over 30' : '30'} </li>
+//    <ul>
+// `;
 
-document.body.innerHTML = html; 
-// result below in the browser:
-// Name: Elias
-// Age: 30
-// Job: web developer
-// City: Dublin
+// document.body.innerHTML = html; 
+// // result below in the browser:
+// // Name: Elias
+// // Age: 30
+// // Job: web developer
+// // City: Dublin
+
+// // ARRAYS AND ARRAYS METHODS ==================================
+// // create some arrays
+// const numbers = [45,34,44,55,66,89];
+// const numbers2 = new Array(22,33,45,66,77);//array construction
+// const fruit = ['apple', 'banana', 'orange', 'pear'];
+// const mixed = [22,'hello', true, undefined, null, {a:1,b:2}, new Date()];
+
+// let val;
+
+// // get array length
+// val = numbers.length;// 6
+// // check if is array
+// val = Array.isArray(numbers);// true
+// // get single value
+// val = numbers[3];// 55
+// val = numbers[0];// 45
+// // insert into array
+// numbers[2] = 100;//[45, 34, 100, 55, 66, 89]
+// // find index of value
+// val = numbers.indexOf(66); // index 4
+
+// // Mutating arrays
+// numbers.push(250);//add this value to the end of the array
+// numbers.unshift(120);// add this value to the begin of the array
+// numbers.pop();// take of from end
+// numbers.shift();// takes value from the begin of the array
+// numbers.splice(1,1);// ??
+// numbers.reverse();// reverses the array
+
+// concatenate arrays
+//val = numbers.concat(numbers2);// [89, 66, 55, 100, 45, 22, 33, 45, 66, 77]
+
+// // sort arrays
+// val = fruit.sort();
+// val = numbers.sort();
+
+// // use the "compare function"
+// val = numbers.sort(function(x, y){
+//     return x - y;
+// });
+
+// // reverse sort 
+// val = numbers.sort(function(x, y){
+//     return y - x;
+// });
+
+// // find
+// function under50(num){
+//     return num < 50;
+// };
+
+// function over50(num){
+//     return num > 50;
+// };
+
+// val = numbers.find(under50);// 45
+// val = numbers.find(over50);// 55
+
+// console.log(numbers);
+// console.log(val);
