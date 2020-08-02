@@ -93,9 +93,34 @@ changes (mutate) with data-structure methods and concatenation.
 let val;
 // number to string 
 val = 5;
+val = String(4+4);// will override the last variable (val).
+/*
+if the value is put as a string it will be converted as string.
+if number as a number. (obviously). val.length is undefined as a number..
+*/
+//boolean to string
+val = String(true);
+//date to string
+val = String(new Date());
+//array to string
+val = String([1,2,3,4]);
 
+// toString()
+//number to string
+val = (5).toString();
+//boolean to string
+val = (true).toString();
+
+// string to number
+val = Number('5');
+val = Number(true);// equal to 1
+val = Number(false);// equal to 0
+val = Number(null);// also equal to 0
+val = Number('hello');// NaN or not a number
+val = Number([1,2]);//NaN
 
 // output 
 console.log(val);
 console.log(typeof val);
-console.log(val.length);
+// console.log(val.length);// only work  on strings
+console.log(val.toFixed())// gives decimal numbers e.g: val = Number('5').toFixed(2) would be 5.00
