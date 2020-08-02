@@ -212,8 +212,41 @@
 // val = str.replace('Elias', 'Prado');// 'Hello there my name is Prado'
 // console.log(val);
 
-// TEMPLATE LITERALS
+// TEMPLATE LITERALS ================================
 const name = 'Elias';
 const age = 30;
 const job = 'web developer';
 const city = 'Dublin';
+let html;
+
+// without template strings (es5)
+html = '<ul><li>Name: ' + name + '</li><li>Age: ' + age + '</li><li>Job: ' + job + '</li><li>City: ' + city + '</li></ul>';
+
+html = '<ul>' +
+     '<li>Name: ' + name + '</li>' +
+     '<li>Age: ' + age + '</li>' +
+     '<li>Job: ' + job + '</li>' +
+     '<li>City: ' + city + '</li>' +
+     '</ul>';
+
+function hello(){
+    return 'hello ' + name; 
+}
+// with template strings (es6)
+html = `
+   <ul>
+     <li>Name: ${name} </li>
+     <li>Age: ${age} </li>
+     <li>Job: ${job} </li>
+     <li>City: ${2 + 2} </li>
+     <li>City: ${hello()} </li>
+     <li>City: ${age > 30 ? 'Over 30' : '30'} </li>
+   <ul>
+`;
+
+document.body.innerHTML = html; 
+// result below in the browser:
+// Name: Elias
+// Age: 30
+// Job: web developer
+// City: Dublin
