@@ -313,40 +313,18 @@
 // console.log(val);
 
 // OBJECT LITERALS 
-// const  person = {
-//     firstName: 'Steve',
-//     lastName: 'Prado',
-//     age: 30,
-//     email: 'steveprado@aol.com',
-//     hobbies: ['music', 'games', 'sports'],
-//     address: {
-//         city: 'Gurulhos',
-//         state: 'SP'
-//     },
-//     getBirthYear: function(){
-//         return 2020 - this.age;
-//     }
-// }
+// 
 
-// let val;
+//DATE & TIMES =====================================================
+let val;
 
-// val = person;
-// // get specific value
-// val = person.firstName;//Steve
-// val = person['firstName'];//Steve
-// val = person.age;//30
-// val = person.hobbies[1];//games
-// val = person.address.state;//SP
-// val = person.getBirthYear();
-
-// console.log(val);
-
-// const people = [
-//     {name: 'John', age:30},
-//     {name: 'Mike', age:20},
-//     {name: 'Nanci', age:25}
-// ];
-
-// for(let i =0; i < people.length; i++){
-//     console.log(people[i].name);
-// }// John //Mike// Nanci
+const today = new Date();// current time
+let birthday = new Date('03-10-1990 14:00');
+birthday = new Date('03/10/1990 14:00');
+val = today.getMonth();// 7 or the current month today
+val = today.getDate();// takes the day mumber as 3 or 27
+val = today.getFullYear();//2020
+val = today.getHours();
+val = today.getMinutes();
+val = today.getTime();
+console.log(val);
