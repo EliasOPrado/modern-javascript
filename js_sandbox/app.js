@@ -316,15 +316,152 @@
 // 
 
 //DATE & TIMES =====================================================
-let val;
+// let val;
 
-const today = new Date();// current time
-let birthday = new Date('03-10-1990 14:00');
-birthday = new Date('03/10/1990 14:00');
-val = today.getMonth();// 7 or the current month today
-val = today.getDate();// takes the day mumber as 3 or 27
-val = today.getFullYear();//2020
-val = today.getHours();
-val = today.getMinutes();
-val = today.getTime();
-console.log(val);
+// const today = new Date();// current time
+// let birthday = new Date('03-10-1990 14:00');
+// birthday = new Date('03/10/1990 14:00');
+// val = today.getMonth();// 7 or the current month today
+// val = today.getDate();// takes the day mumber as 3 or 27
+// val = today.getFullYear();//2020
+// val = today.getHours();
+// val = today.getMinutes();
+// val = today.getTime();
+// console.log(val);
+
+//IF STATEMENT AND COMPARASION OPERATORS ==========================
+//example
+// if(something){
+//     do something
+// }else{
+//     do something else
+// }
+
+// const id = '100';
+// equal to 
+// if(id == 100){
+//     console.log('CORRECT');//correct
+// }else{
+//     console.log('INCORRECT'); 
+// }
+
+// // not equal to 
+// if(id != 100){
+//     console.log('CORRECT');
+// }else{
+//     console.log('INCORRECT'); // incorrect
+// }
+
+// // equal to value & type
+// // equal to 
+// if(id === 100){// not the same type because this 100 is a number and id is a string
+//     console.log('CORRECT');
+// }else{
+//     console.log('INCORRECT'); 
+// }
+
+// // not equal to value & type
+// // equal to 
+// if(id !== 100){// correct since they are different in type
+//     console.log('CORRECT');
+// }else{
+//     console.log('INCORRECT'); 
+// }
+
+// test if undefined
+// if(typeof id !== 'undefined'){
+//     console.log(`The ID is ${id}`);
+// }else{
+//     console.log('No ID.')
+// }
+
+// Greater and less than 
+// if(id > 100){
+//     console.log('CORRECT');
+// }else{
+//     console.log('INCORRECT'); 
+// }
+
+// const color = 'yellow';
+// if (color === 'red'){
+//     console.log('Color is red');
+// }else if (color === 'blue'){
+//     console.log('Color is blue');
+// } else {
+//     console.log('Color is not red or blue');
+// }
+
+// Logical operators
+
+// const name = 'Steve';
+// const age = 20;
+
+// // and &&
+// if (age > 0 && age <12){
+//     console.log(`${name} is a child`);
+// }else if (age >= 13 && age <= 19){
+//     console.log(`${name} is a teeager`);
+// }else {
+//     console.log(`${name} is an adult.`);
+// }
+
+// // Or ||
+
+// if(age < 16 || age > 65){
+//     console.log(`${name} can not run in race`);
+// }else{
+//     console.log(`${name} is registered for the race`);
+// }
+
+// // ternary operator
+// console.log(id === 100 ? 'correct': 'incorrect');
+// // the same as "Is the id the same type of 100? correct or incorrect?"
+
+// //without braces
+// if(id === 100)
+//     console.log('Correct');
+// else
+//     console.log('incorrect');
+
+// SWITCHES =======================================================
+
+// const color = 'red';
+
+// switch(color){
+//     case 'red':
+//         console.log('Color is red');
+//         break;
+//     case 'blue':
+//         console.log('Color is blue');
+//         break;
+//     default:
+//         console.log('Color is not red or bue');
+//         break;
+// }
+
+// // will get the actual day and send to template literail
+// switch(new Date().getDay()){
+//     case 0:
+//         day = 'Sunday';
+//         break;
+//     case 1:
+//         day = 'Monday';
+//         break;
+//     case 2:
+//         day = 'Tuesday';
+//         break;
+//     case 3:
+//         day = 'Wednesday';
+//         break;
+//     case 4:
+//         day = 'Thursday';
+//         break;
+//     case 5:
+//         day = 'Friday';
+//         break;
+//     case 6:
+//         day = 'Saturday';
+//         break;
+// }
+
+// console.log(`Today is ${day}`);
