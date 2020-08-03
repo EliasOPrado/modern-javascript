@@ -311,3 +311,42 @@
 
 // console.log(numbers);
 // console.log(val);
+
+// OBJECT LITERALS 
+// const  person = {
+//     firstName: 'Steve',
+//     lastName: 'Prado',
+//     age: 30,
+//     email: 'steveprado@aol.com',
+//     hobbies: ['music', 'games', 'sports'],
+//     address: {
+//         city: 'Gurulhos',
+//         state: 'SP'
+//     },
+//     getBirthYear: function(){
+//         return 2020 - this.age;
+//     }
+// }
+
+// let val;
+
+// val = person;
+// // get specific value
+// val = person.firstName;//Steve
+// val = person['firstName'];//Steve
+// val = person.age;//30
+// val = person.hobbies[1];//games
+// val = person.address.state;//SP
+// val = person.getBirthYear();
+
+// console.log(val);
+
+// const people = [
+//     {name: 'John', age:30},
+//     {name: 'Mike', age:20},
+//     {name: 'Nanci', age:25}
+// ];
+
+// for(let i =0; i < people.length; i++){
+//     console.log(people[i].name);
+// }// John //Mike// Nanci
