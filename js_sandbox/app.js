@@ -59,7 +59,7 @@
 // // Reference data/types objects
 // //arrays, object literal, functions, dates and anything else...
 
-// // PRIMITIVE TYPES ========================================================
+// // PRIMITIVE TYPES
 // const name = 'john';
 // console.log(typeof name);//string 
 
@@ -521,7 +521,7 @@
 // todo.add();
 // todo.edit(22);
 
-// GENERAL LOOPs
+// GENERAL LOOPs ====================================================================
 // let i = 0; is the begin of the code;
 // i < 10; is a condition
 // i++ is an increment as same as i = i + 1 until reach the condition
@@ -568,7 +568,7 @@
 // while(i < 10);
 
 // LOOP THROUGH ARRAY
-const cars = ['Ford', 'Mustang', 'Mercedes', 'Volks', 'BMW'];
+// const cars = ['Ford', 'Mustang', 'Mercedes', 'Volks', 'BMW'];
 
 // for(i = 0; i < cars.length; i++){
 //     // will not work as cars.i;
@@ -627,5 +627,65 @@ But using map() will allow you to write less code
 // }
 
 // for(let x in user){
-//     console.log(`${x}` : ${user[x]});
+//     console.log(`${x} : ${user[x]}`);
 // }
+
+// WINDOW METHODS / OBJECTS / PROPRETIES =================================================
+
+//Alert
+//alert('Hello word');
+
+// Prompt
+// const input = prompt();
+// alert(input);// will create an alert with an input to be added by the user and will resent that input
+
+// Confirm
+
+// if (confirm('Are you sure')){
+//     console.log('YES');
+// }else{
+//     console.log('NO');
+// }// cancel = NO, submit = YES
+
+let val;
+
+// outter height and width
+val = window.outerHeight;// (counting everything) takes the height of the monitor..
+val = window.outerWidth;// (counting everything) takes the widht of the monitor..
+
+// inner height and width
+val = window.innerHeight;// (only the inner web page) takes the height of the monitor..
+val = window.innerWidth;// (only the inner web page) takes the widht of the monitor..
+
+// scroll points
+val = window.scrollY;// for animation 
+val = window.screenX;
+
+// location object
+val = window.location;// shows the hostname, port and so on..
+val = window.location.hostname;// 127.0.0.1
+val = window.location.port;// 5500
+val = window.location.href;// https://www.domain....
+val = window.location.search;// adds the url search patterns..
+
+// redirect
+// window.location.href = 'https://google.com';// will be redirected to google
+
+// reload
+// window.location.reload(); // will keep reloading
+
+// history object
+// window.history.go(-2);// goes to the number value of your web history
+// val = window.history.length;// will give the amount of history in your browser history
+
+// navigator object
+// val = window.navigator;// tells the name of navigator, pluggings, storage...
+ val = window.navigator.appName;// Netscape
+ val = window.navigator.appVersion;// will give the version of the browser..
+ val = window.navigator.userAgent;
+ val = window.navigator.platform;//MacIntel.... win32..
+ val = window.navigator.vendor; // Google Inc
+ val = window.navigator.language; // en-GB
+
+
+console.log(val);
