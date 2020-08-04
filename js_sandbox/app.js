@@ -1,4 +1,4 @@
-// // var, let and const 
+// // VAR, LET and CONST 
 
 // //assigning name 
 // var name = 'John';
@@ -53,13 +53,13 @@
 // changes (mutate) with data-structure methods and concatenation.
 // */
 
-// // PRIMITIVE DATA TYPES ==================
+// // PRIMITIVE DATA TYPES ===================================================
 // // strings, numbers, boolean, null, undefined and symbols (es6)
 
 // // Reference data/types objects
 // //arrays, object literal, functions, dates and anything else...
 
-// // PRIMITIVE TYPES =======================
+// // PRIMITIVE TYPES ========================================================
 // const name = 'john';
 // console.log(typeof name);//string 
 
@@ -76,7 +76,7 @@
 // const sym = Symbol();
 // console.log(typeof sym);
 
-// //REFERENCE TYPES - objects  ========
+// //REFERENCE TYPES - objects  ==============================================
 // const hobbies = ['movies', 'surf'];
 // // object literal 
 // const address = {
@@ -88,7 +88,7 @@
 // console.log(today);
 // console.log(typeof today);
 
-// // TYPE CONVERSION =====================
+// // TYPE CONVERSION ========================================================
 
 // let val;
 // // number to string 
@@ -155,7 +155,7 @@
 
 // console.log(val);
 
-// STRINGS AND CONCATENATION ===================
+// STRINGS AND CONCATENATION =================================================
 // const firstName = 'Willian';
 // const lastName = 'Johnson';
 // age = 30;
@@ -212,7 +212,7 @@
 // val = str.replace('Elias', 'Prado');// 'Hello there my name is Prado'
 // console.log(val);
 
-// TEMPLATE LITERALS ================================
+// TEMPLATE LITERALS =========================================================
 // const name = 'Elias';
 // const age = 30;
 // const job = 'web developer';
@@ -251,7 +251,7 @@
 // // Job: web developer
 // // City: Dublin
 
-// // ARRAYS AND ARRAYS METHODS ==================================
+// // ARRAYS AND ARRAYS METHODS ==============================================
 // // create some arrays
 // const numbers = [45,34,44,55,66,89];
 // const numbers2 = new Array(22,33,45,66,77);//array construction
@@ -315,7 +315,7 @@
 // OBJECT LITERALS 
 // 
 
-//DATE & TIMES =====================================================
+//DATE & TIMES ===============================================================
 // let val;
 
 // const today = new Date();// current time
@@ -329,7 +329,7 @@
 // val = today.getTime();
 // console.log(val);
 
-//IF STATEMENT AND COMPARASION OPERATORS ==========================
+//IF STATEMENT AND COMPARASION OPERATORS =====================================
 //example
 // if(something){
 //     do something
@@ -423,7 +423,7 @@
 // else
 //     console.log('incorrect');
 
-// SWITCHES =======================================================
+// SWITCHES ==================================================================
 
 // const color = 'red';
 
@@ -465,3 +465,167 @@
 // }
 
 // console.log(`Today is ${day}`);
+
+// FUNCTION DECLARATIONS AND EXPRESSIONS =====================================
+
+// function greet(){
+//     console.log('Hello');
+// }
+
+// greet();
+
+// // using parameters
+// function greet(firstName, lastName){
+//     return 'Hello ' + firstName + lastName;
+// }
+// console.log(greet('John ', 'Prado'));
+
+// // if the parameters are empty there will not have  default value
+// // so lets define a default name for the parameters
+// function greet(firstName = 'John ', lastName = 'Prado'){
+//     return 'Hello ' + firstName + lastName;
+// }
+// console.log(greet());//Hello John Prado
+
+// // FUNCTION EXPRESSIONS 
+// const square = function(x){
+//     return x * x;
+// }; // ';' because it is a variable
+
+// console.log(square(8));
+
+// IMMIDIATLEY INVOKABLE FUNCTION EXPRESSIONS - IIFEs
+
+// (function(){
+//     console.log('IIFE Ran.. weird stuff going on here.. ');
+// })();
+
+// (function(name){
+//     console.log('Hello ' + name);
+// })('Elias');// Hello Elias
+
+// PROPERTY METHODS
+// const todo = {
+//     add: function(){
+//         console.log('Add todo..');
+//     },
+//     edit: function(){
+//         console.log(`Edit todo ${edit}`)
+//     }
+// }
+
+// todo.delete = function(){
+//     console.log('Delete todo..');
+// }
+
+// todo.add();
+// todo.edit(22);
+
+// GENERAL LOOPs
+// let i = 0; is the begin of the code;
+// i < 10; is a condition
+// i++ is an increment as same as i = i + 1 until reach the condition
+
+// FOR LOOP
+// for(let i = 0; i < 10; i++){
+//     console.log(i);//0 1 2 3 4 5 6 7 8 9
+// }
+
+// Add a conditional into a specific number
+// the result of this loop is 0 1 2 3 4 5 6 7 is my favorite number 8 9
+// 
+
+// for(let i = 0; i < 10; i++){
+//     if(i === 7){
+//         console.log('7 is my favorite number');
+//         continue;// will tell the loop to continue to the next iteration
+//     }
+
+//     if(i === 5){
+//         console.log('Stop the loop');
+//         break;// will break the loop at the numer 5
+//     }
+
+//     console.log(i);// will continue the loop
+// }
+
+// WHILE LOOP 
+// let i = 0;
+
+// while(i < 10){
+//     console.log('Number ' + i);
+//     i++;
+// }
+
+// DO WHILE loop
+
+// let i = 0;
+
+// do {
+//     console.log('Number ' + i)
+//     i++;
+// }
+// while(i < 10);
+
+// LOOP THROUGH ARRAY
+const cars = ['Ford', 'Mustang', 'Mercedes', 'Volks', 'BMW'];
+
+// for(i = 0; i < cars.length; i++){
+//     // will not work as cars.i;
+//     console.log(cars[i]);
+// }
+
+// forEach() loop
+/*
+Foreach loop (or for each loop) is a control flow statement 
+for traversing items in a collection. 
+Foreach is usually used in place of a standard for loop statement. 
+Unlike other for loop constructs,
+however, foreach loops[1] usually maintain no explicit counter: 
+they essentially say "do this to everything in this set", 
+rather than "do this x times".
+*/
+// cars.forEach(function(car){
+//     console.log(car);
+// });
+
+// for each with index
+// cars.forEach(function(car, index, array){
+//     console.log(`${index} : ${car}`);// usage of template literal
+//     // 0 : Ford, 1 : Mustang ....
+// });
+
+// map() method to loop items in an object **
+// object
+// const users = [
+//     {id:1, name:'John'},
+//     {id:2, name:'Mary'},
+//     {id:3, name:'Karen'},
+//     {id:4, name:'Peter'},
+// ];
+
+/*
+map() takes each element from an original array, 
+transforms it with a function that you specify, 
+and adds the result to a new array in the same order.
+
+Sure, you could use a for loop to do this. 
+But using map() will allow you to write less code
+ and make your code more readable.
+*/
+// const ids = users.map(function(user){
+//     return user.id;
+// });
+
+// console.log(ids);// [1,2,3,4]
+
+// FOR IN loop ** (same as python)
+// const user = {
+//     firstName = 'John',
+//     lastName = 'Doe',
+//     age: 40,
+// }
+
+// for(let x in user){
+//     console.log(`${x}` : ${user[x]});
+// }
