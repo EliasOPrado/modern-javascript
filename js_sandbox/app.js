@@ -647,45 +647,81 @@ But using map() will allow you to write less code
 //     console.log('NO');
 // }// cancel = NO, submit = YES
 
-let val;
+// let val;
 
-// outter height and width
-val = window.outerHeight;// (counting everything) takes the height of the monitor..
-val = window.outerWidth;// (counting everything) takes the widht of the monitor..
+// // outter height and width
+// val = window.outerHeight;// (counting everything) takes the height of the monitor..
+// val = window.outerWidth;// (counting everything) takes the widht of the monitor..
 
-// inner height and width
-val = window.innerHeight;// (only the inner web page) takes the height of the monitor..
-val = window.innerWidth;// (only the inner web page) takes the widht of the monitor..
+// // inner height and width
+// val = window.innerHeight;// (only the inner web page) takes the height of the monitor..
+// val = window.innerWidth;// (only the inner web page) takes the widht of the monitor..
 
-// scroll points
-val = window.scrollY;// for animation 
-val = window.screenX;
+// // scroll points
+// val = window.scrollY;// for animation 
+// val = window.screenX;
 
-// location object
-val = window.location;// shows the hostname, port and so on..
-val = window.location.hostname;// 127.0.0.1
-val = window.location.port;// 5500
-val = window.location.href;// https://www.domain....
-val = window.location.search;// adds the url search patterns..
+// // location object
+// val = window.location;// shows the hostname, port and so on..
+// val = window.location.hostname;// 127.0.0.1
+// val = window.location.port;// 5500
+// val = window.location.href;// https://www.domain....
+// val = window.location.search;// adds the url search patterns..
 
-// redirect
-// window.location.href = 'https://google.com';// will be redirected to google
+// // redirect
+// // window.location.href = 'https://google.com';// will be redirected to google
 
-// reload
-// window.location.reload(); // will keep reloading
+// // reload
+// // window.location.reload(); // will keep reloading
 
-// history object
-// window.history.go(-2);// goes to the number value of your web history
-// val = window.history.length;// will give the amount of history in your browser history
+// // history object
+// // window.history.go(-2);// goes to the number value of your web history
+// // val = window.history.length;// will give the amount of history in your browser history
 
-// navigator object
-// val = window.navigator;// tells the name of navigator, pluggings, storage...
- val = window.navigator.appName;// Netscape
- val = window.navigator.appVersion;// will give the version of the browser..
- val = window.navigator.userAgent;
- val = window.navigator.platform;//MacIntel.... win32..
- val = window.navigator.vendor; // Google Inc
- val = window.navigator.language; // en-GB
+// // navigator object
+// // val = window.navigator;// tells the name of navigator, pluggings, storage...
+//  val = window.navigator.appName;// Netscape
+//  val = window.navigator.appVersion;// will give the version of the browser..
+//  val = window.navigator.userAgent;
+//  val = window.navigator.platform;//MacIntel.... win32..
+//  val = window.navigator.vendor; // Google Inc
+//  val = window.navigator.language; // en-GB
 
+// console.log(val);
 
-console.log(val);
+// BLOCK SCOPE WITH LET AND CONST ==========================================================
+
+// Global scope
+// var a = 1;
+// let b = 2;
+// const c = 3;
+
+// // function test(){
+// //     var a = 4;
+// //     let b = 5;
+// //     const c = 6;
+// //     console.log('Function scope: ', a, b, c);
+// // }
+
+// // test();// Function scope:  4 5 6
+// // console.log('Global scope: ', a, b, c);//Global scope:  1 2 3
+
+// // with conditional
+// // if(true){
+// //     //block scope
+// //     var a = 4;// overrided the first var = 1; above
+// //     let b = 5;
+// //     const c = 6;
+// //     console.log('If/block scope: ', a, b, c);
+// // }
+
+// // // the if/block scope result: If/block scope:  4 5 6
+// // console.log('Global scope: ', a, b, c);//Global scope:  4 2 3
+
+// // with for loop
+// for(let a = 0; a < 10; a++){
+//     //if use var instead of let the global var 'a' will become 10
+//     console.log(`loop: ${a}`);
+// }
+
+// console.log('Global scope: ', a, b, c);
