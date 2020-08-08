@@ -726,5 +726,14 @@ But using map() will allow you to write less code
 
 // console.log('Global scope: ', a, b, c);
 
-// DOM PROJECTS
+// DOCUMENT OBJECT MODEL ===============================>=>=>=>=>=>=
+
+let val;
+
+val = document;
+
+
+
+
+console.log(val);
 
