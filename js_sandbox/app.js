@@ -1112,3 +1112,43 @@ There are two element selectors in JS:
 
 //     document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 40)`;
 // }
+
+// KEYBOARD & INPUT EVENTS =====================================================
+
+// const form = document.querySelector('form');
+// const taskInput = document.getElementById('task');
+// const heading = document.querySelector('h5');
+
+//taskInput.value = "";
+
+// form.addEventListener('submit', runEvent);
+
+// // keydown
+// taskInput.addEventListener('keydown', runEvent);// appear the input when press the key
+
+// // keyup
+// taskInput.addEventListener('keyup', runEvent);// appear the input when releases the key
+
+// // keyup
+// taskInput.addEventListener('keyup', runEvent);//normal click
+
+// //focus
+// taskInput.addEventListener('focus', runEvent);// when clicked in the form 
+
+// //blur
+// taskInput.addEventListener('blur', runEvent);// when clicked out the form 
+
+//cut
+// taskInput.addEventListener('cut', runEvent);//when cut the input value from form
+
+// //paste
+// taskInput.addEventListener('paste', runEvent);// when paste the input in the form 
+
+// function runEvent(e){
+//     console.log(`Event Type: ${e.type}`);
+
+    //get input value
+   // console.log(taskInput.value);// gives the name of the input user placed
+//     heading.innerText = e.target.value;
+//     //e.preventDefault();
+// }
