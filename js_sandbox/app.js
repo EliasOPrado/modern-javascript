@@ -773,7 +773,110 @@ But using map() will allow you to write less code
 //     console.log(script);
 // });
 
-
-
 // console.log(val);
 
+// DOM selectors for single elements. ================================
+
+/*
+There are two element selectors in JS:
+
+1st: document.getElementById()
+2nd: document.getElement
+*/
+
+// document.getElementById(); =======
+
+// console.log(document.getElementById('title'));// will display the entire h1 element (as the name says) get ELEMENT by id
+
+// // get things from the element 
+// console.log(document.getElementById('title').id);// title
+// console.log(document.getElementById('title').className);// heyou
+
+// const projectTitle = document.getElementById('title');
+// // changing styling <<<<<<<<======
+// projectTitle.style.background = "blue"; // will become blue
+// projectTitle.style.padding = "100px"; // will schrink the text with 100px padding around
+// projectTitle.style.color = "#333";// will change the color of the text to dark gray
+// // document.getElementById('title').style.display = "none"; // will remove the element h1
+
+// // changing content<<<<<<<<<======
+// projectTitle.textContent = "Project Name"// will change the name of the h1 to Project Name
+// projectTitle.innerText = "My project name";// the same as textContent
+// projectTitle.innerHTML = "<span style='color:red'> Project third name</span>"; // will also change the name of the text but with the ability to add other approaches such as elements inside the element
+
+
+// document.querySelector()<<<<<<<======
+
+// console.log(document.querySelector("#title")); // Same as using getElementById()
+// console.log(document.querySelector(".myGod")); // will get the element by class
+// console.log(document.querySelector("h1")); // will display the first h1 element 
+
+
+// // styling emelents using querySlector
+
+// document.querySelector("li").style.color = "red";// will only affect the first one
+// document.querySelector("li:last-child").style.color = "pink"; // will affect the last li of the list
+// document.querySelector("li:nth-child(2)").style.color = "pink"; // will affect the one you selected in this case the third one
+// document.querySelector("li:last-child(0)").textContent = "this is a text"; // will change the content text
+// document.querySelector("li:last-child(odd)").style.color = "pink"; // will chang the color of the first odd value li (not all)
+
+// DOM selectors for multiple elements ====================
+
+// document.getElementsByClassName // Elements <== plural
+
+// const items = document.getElementsByClassName('meuDeus');// will display the HTMLCollection array with the meuDeus classes
+// // items[0]; will bring the first item and so on.
+// items[0].style.color = 'red';
+// items[2].style.color = 'pink';
+// items[3].style.color = 'blue';
+// items[4].textContent = 'Hello';
+
+// const listItems = document.querySelector('ul').getElementsByClassName('anyClass'); // will get all the elements inside or wrapped by that element which contain the className
+
+// console.log(listItems);
+
+// document.getElementByTagName()
+// const lis = document.getElementsByTagName('li'); // will display all the li's
+// console.log(lis);
+// lis[0].textContent = 'Hello'; // will change the text content from 0 to Hello
+// lis[1].style.background = 'pink';
+// lis[2].style.color = 'red';
+// lis[3].style.color = 'blue';
+
+// // Conver HTML collection into array
+
+// lisArr = Array.from(lis);
+
+// lisArr.reverse();
+
+// // for each
+
+// lisArr.forEach(function(li, index){
+//     console.log(li.className);
+//     li.textContent = `${index}: Hello`;// will change the name of all the li elements to hello and shows up the element index id (in this case a reversed one)
+// });
+
+// console.log(lisArr);
+
+// document.querySelectorAll() // nodelist
+
+// const items = document.querySelectorAll('li.anyClass');
+
+// items.forEach(function(item, index){// dont need to convert to an array since it's a node list
+//     item.textContent = `${index}: Hello`; // using template literal will display the text hello and its index for each item
+// });
+
+// const liOdd = document.querySelectorAll('li:nth-child(odd)');
+// const liEven = document.querySelectorAll('li:nth-child(even)');
+
+
+// liOdd.forEach(function(li, index){// dont need to convert to an array since it's a node list
+//     li.style.background = '#ccc';// remember 0 = 1 and 2 = 3
+// });
+
+// for(let i = 0; i < liEven.length; i++){
+//     liEven[i].style.background = '#f4f4f4f4';
+// }
+
+
+// console.log(items);
