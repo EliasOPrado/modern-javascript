@@ -942,3 +942,36 @@ There are two element selectors in JS:
 // val = listItem.previousSibling;
 
 // console.log(val);
+
+// Creating Elements ==========================================================
+// const li = document.createElement('li');
+
+// // Add a class
+// li.className = 'collection-item';
+
+// // Add id
+// li.id = 'new-item';
+
+// // Add attribute
+// li.setAttribute('title', 'New item');
+
+// // Create text node and child
+// li.appendChild(document.createTextNode('Hello World!'));
+
+// // create a new link element
+// const link = document.createElement('a');
+
+// // Add classes
+// link.className = 'delete-item secondary-content';
+
+// // Add icon htnl
+// link.innerHTML.innerHTML = '<i class="fa fa-remove"></i>';
+
+// // Append link into li
+// li.appendChild(link);
+
+
+// // Append li as child to ul
+// document.querySelector('ul.collection').appendChild(li);// added a new li in to the ul element
+
+// console.log(li);
