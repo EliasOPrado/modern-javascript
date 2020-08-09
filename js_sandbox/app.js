@@ -1026,3 +1026,89 @@ There are two element selectors in JS:
 // val = link.hasAttribute('href');// boolean
 
 // console.log(val);
+
+// EVENT LISTENERS & THE EVENT OBJECT ================================================
+// document.querySelector('.clear-tasks').addEventListener('click', function(e){
+//     console.log('hello world');// will display hello world after clicking the Clear tasks button
+//     e.preventDefault();
+// });
+
+// document.querySelector('.clear-tasks').addEventListener('click', onClick);
+
+// function onClick(e){
+   //console.log('hello workd again..');// the same approach as the one above
+
+// let val;
+
+// val = e;
+
+// // event target element
+// val = e.target;
+// val = e.target.id;
+// val = e.target.className;// clear-tasks btn black
+// val = e.target.classList;// 0:"clear-tasks", 1:"btn", 2:"black"
+
+
+// e.target.innerText = 'Changed the text';// changes the name of the button
+
+
+// val = e.type;// click
+// val = e.timeStamp;// time always change after cliking
+
+// // coords event relative to th WINDOW
+// val = e.clientY;// 527
+// val = e.clientX;// 163
+
+
+// // coords event relative to th ELEMENT
+// val = e.offsetY;// 21
+// val = e.offsetX;// 166
+
+// console.log(val);
+// }
+
+// MOUSE EVENTS ==================================================================
+
+// const clearBtn = document.querySelector('.clear-tasks');
+// const card = document.querySelector('.card');
+// const heading = document.querySelector('h5');
+
+// //click
+// clearBtn.addEventListener('click', runEvent);// diplays on one click
+
+// // doubleclick
+// clearBtn.addEventListener('dblclick', runEvent);// diplays on double click
+
+
+//mouseDown
+// clearBtn.addEventListener('mousedown', runEvent);// when you click and hold
+
+// //mouseup
+// clearBtn.addEventListener('mouseup', runEvent);// when you finish the click
+
+// //mouseenter
+// card.addEventListener('mouseenter', runEvent);// as same as hover
+
+// //mouseenter
+// card.addEventListener('mouseleave', runEvent);// as same as hover
+
+
+// //mouseover
+// card.addEventListener('mouseover', runEvent);//
+
+// //mouseenter
+// card.addEventListener('mouseout', runEvent);//
+
+
+//mousemove
+//mouseenter
+// card.addEventListener('mousemove', runEvent);//add the path of the mouse...
+
+// // event handler 
+// function runEvent(e){
+//     console.log(`Event Type: ${e.type}`);
+
+//     heading.textContent = `MouseX: ${e.offsetX} MouseY: ${e.offsetY}`; //gives the coordinates of the mouse
+
+//     document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 40)`;
+// }
