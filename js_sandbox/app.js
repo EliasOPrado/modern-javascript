@@ -878,5 +878,67 @@ There are two element selectors in JS:
 //     liEven[i].style.background = '#f4f4f4f4';
 // }
 
-
 // console.log(items);
+// Traversing the DOM or moving elements up and down =======================================
+
+// let val;
+
+// const list = document.querySelector('ul.collection');
+// const listItem = document.querySelector('li.anyClass:first-child');
+
+// val = list; // all <ul>...
+// val = listItem; // <li class"anyClass">0</....
+
+// // get child nodes
+// val = list.childNodes;
+// val = list.childNodes[0];
+// val = list.childNodes[0].nodeName;
+// val = list.childNodes[0].nodeType;// 3
+// val = list.childNodes[1].nodeType;// 1
+
+// /*
+// type of nodes:
+
+// 1 = element
+// 2 = atribute (deprecated)
+// 3 = text node
+// 8 = comment
+// 9 = document itself
+// 10 = DocType
+// */
+
+
+// // get children elements
+// val = list.children;
+// val = list.children[1]; // gives the correspondent name of the children[1]
+// val = list.children[1].textContent = 'Hello';
+
+// // children of children
+// val = list.children[3].children;// will gives the inner elements of the li>3</
+
+// // first child
+// val = list.firstChild;
+// val = list.firstElementChild;// <li class="anyClass">0</li>
+
+// // last child
+// val = list.lastChild;
+// val = list.lastElementChild; //<li class="anyClass">3</li>
+
+// // count child elements
+// val = list.childElementCount; // 4, the same as length but lenfth doenst work without being an array
+
+
+// // Get parent node
+// val = listItem.parentNode;// 4
+// val = listItem.parentElement; // <ul class="collection">...</ul>
+// val = listItem.parentElement.parentElement; // <body>...</body>
+
+// // get next sibling
+// val = listItem.nextSibling;
+// val = listItem.nextElementSibling; // 1
+// val = listItem.nextElementSibling.nextElementSibling; // 2 it simple keep going next.. and so on..
+
+// // get prev sibling
+// val = listItem.previousSibling;
+
+// console.log(val);
