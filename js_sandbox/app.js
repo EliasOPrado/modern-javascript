@@ -975,3 +975,54 @@ There are two element selectors in JS:
 // document.querySelector('ul.collection').appendChild(li);// added a new li in to the ul element
 
 // console.log(li);
+
+
+// Removing and replacing elements =============================================
+
+// // create element
+// const newHeading = document.createElement('h2');
+
+// //Add id 
+// newHeading.id = 'task-title';
+
+// //new text node
+// newHeading.appendChild(document.createTextNode('Task List'));// add inner text
+
+// // get the old heading
+// const oldHeading = document.getElementById('task-title');
+
+// //parent 
+// const cardAction = document.querySelector('.card-action');
+
+// // replace
+// // cardAction.replaceChild(newHeading, oldHeading);
+
+// // Remove elements
+// const lis = document.querySelectorAll('li');
+// const list = document.querySelector('ul');
+
+// // remove list item
+// lis[0].remove();// removes the first element 
+
+// // remove child element
+// list.removeChild(lis[3]);
+
+// // classes & attr
+// const firstLi = document.querySelector('li:first-child');
+// const link = firstLi.children[0];
+
+// let val;
+
+// val = link.className;// show className
+// val = link.classList;// Shows a list with the class name
+// val = link.classList[0];// show the first class in the link
+// link.classList.add('test');// add class test
+// link.classList.remove('test');// remove the class test
+
+
+// // Atributes
+// val = link.getAttribute('href');
+// val = link.setAttribute('href', 'www.google.com');
+// val = link.hasAttribute('href');// boolean
+
+// console.log(val);
