@@ -728,12 +728,52 @@ But using map() will allow you to write less code
 
 // DOCUMENT OBJECT MODEL ===============================>=>=>=>=>=>=
 
-let val;
+// Examining the DOM==
 
-val = document;
+// let val;
+
+// val = document;// will show all hte elements wihting the html file;
+// val = document.all;// gives a collection (array) with all elements
+// val = document.all[1]; // gives the head HTMLAllCollection(8) [html, head, meta ....]
+// val = document.all.length;// will give the length (number of elements) in this case is 8
+// val = document.head;// will only display head.
+// val = document.body;// will display the body and everything that is inside the body
+// val = document.doctype;// will display what doctype <!DOCTYPE html>
+// val = document.domain; // localhost or www.yourdomain.com 
+// val = document.URL;// https://127.0.0.1:5500 
+// val = document.characterSet;// UTF-8
+// val = document.contentType;// text/html
+
+// Select stuffs without using selectors
+
+// val = document.forms; // will display all the forms in a page
+// val = document.forms[2]; // will get the third form in that page
+// val = document.forms[2].id; // will display the id of the third form
+// val = document.forms[2].method; // will display the method rahter it is POST or GET
+// val = document.forms[2].action; // will display the name of the function/view that will handle that form action
+
+
+// val = document.links; // will display the links in the page such as <a> as HTMLCollection
+// val = document.links[3]; // will display the fourth links and its inner details.
+// val = document.links[3].className; // will display  myGod as placed in index.html
+// val = document.links[3].id; // will display the id
+// val = document.links[3].className[0];// will display "m" of the className "myGod"
+// val = document.links[3].classList[1]; // will display "getMe" from the classList
+// val = document.images;// will display all images
+// val = document.scripts;// display the number of scripts elements in the document
+// val = document.scripts[0].getAttribute('src'); // app.js or the name of that file
+
+// // html collection
+// let scripts = document.scripts;
+
+// // make scritps.foreach a function with arrary
+// let scriptsArr = Array.from(scripts);
+
+// scriptsArr.foreach(function(script){
+//     console.log(script);
+// });
 
 
 
-
-console.log(val);
+// console.log(val);
 
