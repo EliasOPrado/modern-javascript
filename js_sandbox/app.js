@@ -1152,3 +1152,102 @@ There are two element selectors in JS:
 //     heading.innerText = e.target.value;
 //     //e.preventDefault();
 // }
+
+// EVENT BUBBLING & DELEGATION =======================================================
+
+// document.querySelector('.card-title').addEventListener('click', 
+// function(){
+//     console.log('card-title');
+// });
+
+// document.querySelector('.card-content').addEventListener('click', 
+// function(){
+//     console.log('card-content');
+// });
+
+// document.querySelector('.card').addEventListener('click', 
+// function(){
+//     console.log('card');
+// });
+
+// document.querySelector('.col').addEventListener('click', 
+// function(){
+//     console.log('col');
+// });
+
+// EVENT DELEGATION ================
+
+// const delItem = document.querySelector('.delete-item');
+
+// delItem.addEventListener('click', deleteItem);
+
+// document.body.addEventListener('click', deleteItem);
+
+// function deleteItem(){
+//     console.log('delete-item');// only the first appeas delete that's why we need event delegation
+//     console.log(e.target);
+// }
+
+//add event delegation
+// function deleteItem(e){
+//     // if(e.target.parentElement.className === 'delete-item secondary-content'){
+//     //     console.log('delete item');
+//     // }
+//     if(e.target.parentElement.classList.contains('delete-item')){
+//         console.log('delete item');
+//         e.target.parentElement.parentElement.remove();
+//     }
+// }
+
+
+// LOCAL & SESSION STORAGE ============================================
+
+// set local storage item
+
+// localStorage.setItem('name', 'John');// Will be storaged into Local Storage under applicaiton in your browser
+// localStorage.setItem('age', '30');
+
+// // remove from storage ====
+// // localStorage.removeItem('name');// will remove key item 'name'
+
+// // get from storge =====
+// const name = localStorage.getItem('name');
+// const age = localStorage.getItem('age');
+// console.log(name, age);
+
+// localStorage.clear();
+
+// this approach will add only one item no more....
+// document.querySelector('form').addEventListener('submit',
+// function(e){
+//     const task = document.getElementById('task').value; // value will add the form value to 'Value' and task to 'Key' in local storage
+//     localStorage.setItem('task', task);
+//     alert('Task saved');
+//     e.preventDefault();
+// })
+
+// // this approach will add multiple items ===
+// document.querySelector('form').addEventListener('submit',
+// function(e){
+//     // gets the input value and id from the form
+//     const task = document.getElementById('task').value; // value will add the form value to 'Value' and task to 'Key' in local storage
+//     // create  new set of Key and Values
+//     let tasks;
+//     if(localStorage.getItem('tasks') === null){
+//         // add an object array if the value is null
+//         tasks = [];
+//     }else{
+//         tasks =  JSON.parse(localStorage.getItem('tasks'));
+//     }
+//     tasks.push(task);
+//     localStorage.setItem('tasks', JSON.stringify(tasks));
+//     alert('Task saved');
+//     e.preventDefault();
+// });
+
+// // will get all the tasks and add to console using forEach() ===
+// const tasks = JSON.parse(localStorage.getItem('tasks'));
+
+// tasks.forEach(function(task){
+//     console.log(task);
+// });
