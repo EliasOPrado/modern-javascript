@@ -183,3 +183,36 @@
 // }
 
 // console.log(customer1.greeting());
+
+// USING Object.create ============================================================
+// const personPrototype = {
+//     greeting: function(){
+//         return `Hello there ${this.firstName} ${this.lastName}`;
+//     },
+//     getsMarried: function(newLastName){
+//         // changes the lastName with newLastName when mary name is added to
+//         // the getsMarried() function
+//         this.lastName = newLastName;
+//     }
+// }
+
+// const mary = Object.create(personPrototype);
+// mary.firstName = 'Mary';
+// mary.lastName = 'Williams';
+// mary.age = 30;
+
+// // adding married name
+// mary.getsMarried('Thompson');
+
+// console.log(mary.greeting());
+
+// const Elias = Object.create(personPrototype, {
+//     firstName: {value: 'Elias'},
+//     lastName: {value: 'Prado'},
+//     age: {value: 30}
+// });
+// /*
+// {firstName: "Elias", lastName: "Prado", age: 30}
+// */ 
+
+// console.log(Elias)
