@@ -132,3 +132,54 @@
 // console.log(mary.getFullName());
 
 // console.log(mary.hasOwnProperty('firstName'));
+
+// PROTOTYPAL INHERITANCE =======================================================
+// inheritance = heranca
+// function Person(firstName, lastName){
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+// }
+
+// // Greting
+// Person.prototype.greeting = function(){
+//     return `Hello there ${this.firstName} ${this.lastName}`;
+// }
+
+// const person1 = new Person('john', 'Doe');
+
+// console.log(person1.greeting());// Hello there john Doe
+
+// // customer constructor
+// function Customer(firstName, lastName, phone, membership){
+//     // inheriting from Person function
+//     Person.call(this, firstName, lastName);
+//     // Since Person function doesnt have phone and membership it should be created
+//     this.phone = phone;
+//     this.membership = membership;
+// }
+
+// // inherit the Person prototype methods
+// Customer.prototype = Object.create(Person.prototype);
+
+// // make customer.prototype return customer
+// Customer.prototype.constructor = Customer;
+
+// // create a customer
+// const customer1 = new Customer('Brad', 'Smith', '000-555-666', 'standard');
+
+// console.log(customer1);
+// /* result..
+// Customer {
+//     firstName: "Brad",
+//     lastName: "Smith",
+//     phone: "000-555-666",
+//     membership: "standard"
+//     }
+// */
+
+// // customer greeting
+// Customer.prototype.greeting = function(){
+//     return `Hello there ${this.firstName} ${this.lastName} welcome to our company.`;
+// }
+
+// console.log(customer1.greeting());
