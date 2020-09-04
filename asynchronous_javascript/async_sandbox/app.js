@@ -1,14 +1,17 @@
 document.getElementById('button1').addEventListener('click', loadCustomer);
 
+// get the button id and add a click event with a function
 document.getElementById('button2').addEventListener('click', loadCustomers);
 
 //load customer
 function loadCustomer(){
+    //XMLHttpRequest can be used to retrieve any type of data, not just XML.
     const xhr = new XMLHttpRequest();
-
+    //command to have access to the file/db
     xhr.open('GET', 'customer.json', true);
 
     xhr.onload = function(){
+        console.log(this);
         if(this.status === 200){
             // console.log(this.responseText);
 
