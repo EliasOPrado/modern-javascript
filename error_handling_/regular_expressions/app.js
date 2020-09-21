@@ -71,6 +71,20 @@ re = /Hel{2,}o/i; // must occour at least {n} times
 // parentheses () - grouping
 re = /([0-9])x{3}$/i; // 3x3x3x
 
+// Shorthand character classes
+re = /\w/; // word character - alphanumeric pr _
+re = /\w+/; // + = one or more
+re = /\W/; // matches any non-word characters like @£$%^&*+ and space
+re = /\d/; // matches any digit 0 or more times
+re = /\D/; // matches non-digits
+re = /\s/; // matches any white space char like tab and/or space
+re = /\S/; // matches non-white space char
+re = /Hell\b/i; // Word boundary
+
+// assertions
+re = /x(?=y)/; // match x only if followed by y. e.g: xdds =not match but xddsy matches 
+re = /x(?!y)/;  // match x only if not followed by y
+
 // string to mathc
  const str = 'Hello';
 // const str = '4ray?';
