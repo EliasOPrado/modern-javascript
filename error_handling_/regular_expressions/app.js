@@ -53,9 +53,27 @@ re = /h*llo/i; // matches any character zero or more times ... ex: heeeello will
 re = /gre?a?y/i; // optional character.  // optional: gray, grey or gry will match
 re = /gre?a?y\?/i; // escape character
 
+// Brackets [] - character sets
+re = /gr[ae]y/i; // must be an a or e ... better solution than this /gre?a?y/i;
+re = /[GF]ray/i; // must be a G or F (uppecase)
+re = /[^GF]ray/i; // match anythin except a G or F
+re = /[A-Z]ray/i; // any uppercase from A to Z ... vray? matched [A-Z]ray
+re = /[a-z]ray/i;  // any lowercase from a to z
+re = /[A-Za-z]ray/i; // will match any upper or lowercase letters
+re = /[0-9]ray/i; // matches any single digit
+re = /[0-9][0-9]ray/i; // matches double digits
+
+// Braces {} - quantifiers
+re = /Hel{2}o/i; // must occur {n} amount of times
+re = /Hel{2,4}o/i; // {n} ranges from {2 to 4} in terms of range. e.g: hello to hellllo or helllo
+re = /Hel{2,}o/i; // must occour at least {n} times
+
+// parentheses () - grouping
+re = /([0-9])x{3}$/i; // 3x3x3x
+
 // string to mathc
-// const str = 'Hello';
-const str = 'gray?';
+ const str = 'Hello';
+// const str = '4ray?';
 
 // log results
 const result = re.exec(str);
